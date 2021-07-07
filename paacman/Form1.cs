@@ -161,10 +161,9 @@ namespace paacman
 
                     }
                 }
-                if (x is PictureBox )
+                if (x is PictureBox)
 
-                        if ((string) x. Tag == "coin" )
-
+                    if ((string)x.Tag == "coin" && x.Visible == true)
                     {
                         if (pacman.Bounds.IntersectsWith(x.Bounds))
 
@@ -173,10 +172,11 @@ namespace paacman
                             x.Visible = false;
                         }
 
-                        { 
-                    
+
+                        {
+
+                        }
                     }
-                }
             }
 
             // end of for loop checking walls, points and ghosts. 
@@ -185,13 +185,19 @@ namespace paacman
             pinkGhost.Left += ghost3x;
             pinkGhost.Top += ghost3y;
 
+            redGhost.Left += ghost3x;
+            redGhost.Top += ghost3y;
+
+            yellowGhost.Left += ghost3x;
+            yellowGhost.Top += ghost3y;
+
             if (pinkGhost.Left < 1 ||
                 pinkGhost.Left + pinkGhost.Width > ClientSize.Width - 2 ||
                 (pinkGhost.Bounds.IntersectsWith(pictureBox4.Bounds)) ||
                 (pinkGhost.Bounds.IntersectsWith(pictureBox3.Bounds)) ||
                 (pinkGhost.Bounds.IntersectsWith(pictureBox1.Bounds)) ||
                 (pinkGhost.Bounds.IntersectsWith(pictureBox2.Bounds))
-                )
+                 )
             {
                 ghost3x = -ghost3x;
             }
@@ -199,6 +205,7 @@ namespace paacman
             {
                 ghost3y = -ghost3y;
             }
+            
             // end of the crazy ghost movements
         }
     }
