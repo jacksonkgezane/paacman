@@ -160,16 +160,18 @@ namespace paacman
             this.redGhost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.redGhost.TabIndex = 4;
             this.redGhost.TabStop = false;
+            this.redGhost.Tag = "ghost";
             // 
             // yellowGhost
             // 
             this.yellowGhost.Image = global::paacman.Properties.Resources.yellow_guy;
-            this.yellowGhost.Location = new System.Drawing.Point(185, 412);
+            this.yellowGhost.Location = new System.Drawing.Point(185, 397);
             this.yellowGhost.Name = "yellowGhost";
             this.yellowGhost.Size = new System.Drawing.Size(40, 40);
             this.yellowGhost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.yellowGhost.TabIndex = 5;
             this.yellowGhost.TabStop = false;
+            this.yellowGhost.Tag = "ghost";
             // 
             // pinkGhost
             // 
@@ -180,6 +182,7 @@ namespace paacman
             this.pinkGhost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pinkGhost.TabIndex = 6;
             this.pinkGhost.TabStop = false;
+            this.pinkGhost.Tag = "ghost";
             // 
             // pacman
             // 
@@ -537,9 +540,9 @@ namespace paacman
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(69, 146);
+            this.label2.Location = new System.Drawing.Point(38, 169);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(641, 118);
+            this.label2.Size = new System.Drawing.Size(690, 118);
             this.label2.TabIndex = 39;
             this.label2.Text = "label2";
             // 

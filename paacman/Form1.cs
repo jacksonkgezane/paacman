@@ -18,7 +18,7 @@ namespace paacman
         bool goright;
 
 
-        int speed = 5;
+        int speed = 10;
 
         //ghost 1 and 2 variables. These guys are sane well sort of
         int ghost1 = 8;
@@ -89,6 +89,8 @@ namespace paacman
             {
                 godown = false;
             }
+
+          
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -155,7 +157,7 @@ namespace paacman
                     {
                         pacman.Left = 0;
                         pacman.Top = 25;
-                        label2.Text = "GAME OVER";
+                        label2.Text = "GAME-OVER";
                         label2.Visible = true;
                         timer1.Stop();
 
