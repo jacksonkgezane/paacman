@@ -163,7 +163,7 @@ namespace paacman
                 }
                 if (x is PictureBox )
 
-                        if ((string) x. Tag == "coin")
+                        if ((string) x. Tag == "coin" )
 
                     {
                         if (pacman.Bounds.IntersectsWith(x.Bounds))
