@@ -29,12 +29,15 @@ namespace paacman
         int ghost3y = 8;
 
         int score = 0;
+        private bool isGameOver;
 
         // end of listing variables
         public Form1()
         {
             InitializeComponent();
             label2.Visible = false;
+            label3.Visible = false;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -119,6 +122,16 @@ namespace paacman
                 pacman.Top += speed;
                 //moving down
             }
+            if (pacman.Left < -10)
+            {
+                pacman.Left = 680;
+            }
+            if (pacman.Left < -680)
+            {
+                pacman.Left = -10;
+            }
+
+
             //player movements code end
 
             //moving ghosts and bumping witht he walls
@@ -153,11 +166,13 @@ namespace paacman
                 if (x is PictureBox && x.Tag == "wall" || x.Tag == "ghost")
                 {
                     // checking if the player hits the wall or the ghost, then game is over
-                    if (((PictureBox)x).Bounds.IntersectsWith(pacman.Bounds) || score == 30)
+                    if (((PictureBox)x).Bounds.IntersectsWith(pacman.Bounds) || score == 29)
                     {
                         pacman.Left = 0;
                         pacman.Top = 25;
                         label2.Text = "GAME-OVER";
+                        label3.Text = "You win";
+                        label3.Visible = true;
                         label2.Visible = true;
                         timer1.Stop();
 
@@ -179,6 +194,10 @@ namespace paacman
 
                         }
                     }
+                if (score == 29)
+                {
+                    gameOver("You win");
+                }
             }
 
             // end of for loop checking walls, points and ghosts. 
@@ -207,9 +226,20 @@ namespace paacman
             {
                 ghost3y = -ghost3y;
             }
-            
+
             // end of the crazy ghost movements
+
+            private void gameOver(string message)
+            {
+
+                isGameOver = true;
+                timer1.Stop();
+                txtScore.Text = Environment.NewLine + message;
+            }     
+
         }
+
+
     }
     }
 

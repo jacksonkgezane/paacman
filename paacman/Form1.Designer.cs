@@ -71,6 +71,7 @@ namespace paacman
             this.txtScore = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -552,11 +553,22 @@ namespace paacman
             this.timer1.Interval = 20;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(304, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(194, 44);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "You win";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 561);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.pictureBox37);
@@ -599,7 +611,7 @@ namespace paacman
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Tag = "wall";
-            this.Text = "Form1";
+            this.Text = "PaacMan";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);
@@ -689,6 +701,7 @@ namespace paacman
         private System.Windows.Forms.Label txtScore;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label3;
     }
 }
 
